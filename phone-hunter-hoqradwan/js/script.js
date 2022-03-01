@@ -4,7 +4,7 @@ document.getElementById('error-message').style.display = "none";
 const allPhones = () => {
     const searchField = document.getElementById('search-box');
     const searchText = searchField.value;
-    // searchField.value = '';
+    searchField.value = '';
     // document.getElementById('error-message').style.display ="none";
     if (searchText == '') {
         document.getElementById('error-message').style.display = "block";
@@ -24,9 +24,9 @@ const showPhones = phones => {
         const div = document.createElement('div');
 
         div.innerHTML = ` 
-    <div class="card m-auto w-50 border p-5">
+    <div class="card m-auto w-75 border p-5">
         <div class="phone-pic">
-            <img class="w-75" src="${phone.image}" alt="">
+            <img class="w-25" src="${phone.image}" alt="">
             <h2 class="mt-3">${phone.phone_name}</h2>
             <h5>${phone.brand}</h5>
             <button onclick = "phoneDetailUrl('${phone.slug}')" class="btn btn-success mt-3">Details</button>
@@ -59,7 +59,7 @@ const showDetails = details => {
             <img class="w-25" src="${details.image}" alt="">
             <h2 class="mt-3">${details.name}</h2>
             <h5>${details.brand}</h5>
-            <h5>${details.releaseDate}</h5> 
+            <h6 class="fw-bold">${details.releaseDate}</h6> 
             <h6> <span class="fw-bold">Sensors:</span> ${details.mainFeatures.sensors}</h6> 
             <h6> <span class="fw-bold">Bluetooth:</span> ${details.others.Bluetooth}</h6> 
             <h6> <span class="fw-bold">GPS:</span> ${details.others.GPS}</h6> 
