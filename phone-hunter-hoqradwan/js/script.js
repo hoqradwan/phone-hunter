@@ -1,13 +1,15 @@
-document.getElementById('error-message').style.display ="none";
+document.getElementById('error-message').style.display = "none";
+
+// All phones section
 const allPhones = () => {
     const searchField = document.getElementById('search-box');
     const searchText = searchField.value;
-    // searchField.value = '';
+    searchField.value = '';
     // document.getElementById('error-message').style.display ="none";
-    if(searchText == ''){
-        document.getElementById('error-message').style.display ="block";
+    if (searchText == '') {
+        document.getElementById('error-message').style.display = "block";
     }
-    else{
+    else {
         const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`;
         fetch(url)
             .then(res => res.json())
@@ -15,13 +17,14 @@ const allPhones = () => {
     }
 }
 
+// Show phones section
 const showPhones = phones => {
     for (const phone of phones) {
         const phoneContainer = document.getElementById('phone-container');
         const div = document.createElement('div');
 
         div.innerHTML = ` 
-        <div class="card m-auto w-50 border p-5">
+    <div class="card m-auto w-50 border p-5">
         <div class="phone-pic">
             <img class="w-75" src="${phone.image}" alt="">
             <h2 class="mt-3">${phone.phone_name}</h2>
@@ -35,14 +38,16 @@ const showPhones = phones => {
     }
 }
 
+// getting phone id url
 const phoneDetailUrl = id => {
     console.log(id);
-    const url = ` https://openapi.programming-hero.com/api/phone/${id}`;
+    const url = `https://openapi.programming-hero.com/api/phone/${id}`;
     fetch(url)
         .then(res => res.json())
         .then(data => showDetails(data.data))
 }
 
+// phone details section
 const showDetails = details => {
     console.log(details.others);
     const phoneDetails = document.getElementById('phone-details');
