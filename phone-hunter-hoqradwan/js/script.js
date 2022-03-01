@@ -13,9 +13,6 @@ const allPhones = () => {
             .then(res => res.json())
             .then(data => showPhones(data.data))
     }
-    // .then(data => console.log(data))
-    // console.log(url);
-    // console.log(searchValue);
 }
 
 const showPhones = phones => {
@@ -26,15 +23,13 @@ const showPhones = phones => {
         div.innerHTML = ` 
         <div class="card m-auto w-50 border p-5">
         <div class="phone-pic">
-            <img class="w-25" src="${phone.image}" alt="">
+            <img class="w-75" src="${phone.image}" alt="">
             <h2 class="mt-3">${phone.phone_name}</h2>
             <h5>${phone.brand}</h5>
             <button onclick = "phoneDetailUrl('${phone.slug}')" class="btn btn-success mt-3">Details</button>
         </div>
-    </div>
-       
-      
-       `
+    </div> 
+    `
         phoneContainer.appendChild(div);
         // console.log(phone);
     }
@@ -43,7 +38,6 @@ const showPhones = phones => {
 const phoneDetailUrl = id => {
     console.log(id);
     const url = ` https://openapi.programming-hero.com/api/phone/${id}`;
-    // const url = `  https://openapi.programming-hero.com/api/phone/apple_iphone_13_pro_max-11089`;
     fetch(url)
         .then(res => res.json())
         .then(data => showDetails(data.data))
@@ -52,29 +46,23 @@ const phoneDetailUrl = id => {
 const showDetails = details => {
     console.log(details.others);
     const phoneDetails = document.getElementById('phone-details');
+    phoneDetails.textContent = '';
     const div = document.createElement('div');
-    div.innerHTML = ` <div class="card m-auto w-50 border p-5">
-        <div class="phone-pic">
+    div.innerHTML = `
+    <div class="card border w-50 m-auto p-5">
+         <div>
             <img class="w-25" src="${details.image}" alt="">
             <h2 class="mt-3">${details.name}</h2>
             <h5>${details.brand}</h5>
             <h5>${details.releaseDate}</h5> 
-            <h6> Sensors: ${details.mainFeatures.sensors}</h6> 
-            <h6> Bluetooth: ${details.others.Bluetooth}</h6> 
-            <h6> GPS: ${details.others.GPS}</h6> 
-            <h6> NFC: ${details.others.NFC}</h6> 
-            <h6> Radio: ${details.others.Radio}</h6> 
-            <h6> USB: ${details.others.USB}</h6> 
-            <h6> WLAN: ${details.others.WLAN}</h6> 
+            <h6> <span class="fw-bold">Sensors:</span> ${details.mainFeatures.sensors}</h6> 
+            <h6> <span class="fw-bold">Bluetooth:</span> ${details.others.Bluetooth}</h6> 
+            <h6> <span class="fw-bold">GPS:</span> ${details.others.GPS}</h6> 
+            <h6> <span class="fw-bold">NFC:</span> ${details.others.NFC}</h6> 
+            <h6> <span class="fw-bold">Radio:</span> ${details.others.Radio}</h6> 
+            <h6> <span class="fw-bold">USB:</span> ${details.others.USB}</h6> 
+            <h6> <span class="fw-bold">WLAN:</span> ${details.others.WLAN}</h6> 
         </div >
     </div > `
-    
     phoneDetails.appendChild(div);
-    // const sensors = details.mainFeatures.sensors;
-    // for(const sensor of sensors){
-    //     const h5 = document.createElement('h5');
-    //     h5.innerHTML = `${ sensor } `;
-    //     div.appendChild(h5);
-    // }
-    
 }

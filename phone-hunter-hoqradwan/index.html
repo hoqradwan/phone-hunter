@@ -17,8 +17,8 @@
     <h1 class="m-4 p-2 text-center text-info bg-dark">Phone Paradise</h1>
     <div class="container w-100 m-auto">
         <div class="row">
-            <div id="phone-details" class="col-md-6 col-sm-12 w-100 mx-auto mb-5 text-center text-info">
-                <h2>Phone Specifications</h2>
+            <div id="phone-details" class="col-md-6 col-sm-12 w-100 mx-auto mb-5 text-center">
+                <h2 class="text-info">Phone Specifications</h2>
             </div>
             <div class="col-md-6 col-sm-12 w-100 text-center">
                 <h2 class="mb-4">Find Phones</h2>
@@ -26,7 +26,7 @@
                     <input id="search-box" type="text" class="form-control" placeholder="Search" aria-label="Search"
                         aria-describedby="basic-addon2">
                     <div class="input-group-append">
-                        <span onclick="allPhones()" class="input-group-text" id="search-btn">Search</span>
+                        <button onclick="allPhones()" class="input-group-text" id="search-btn">Search</button>
                     </div>
                 </div>
                 <h5 id="error-message" class="text-danger">No phone found!</h5>
@@ -34,15 +34,8 @@
         </div>
     </div>
 
-    <!-- <div class="row">
-            <div id="phone-container" class="col-md-4">
-            </div>
-        </div> -->
-    <div class="container d-flex">
-        <div id="phone-container" class="row">
-            <div class="col-md-4">
-            </div>
-        </div>
+    <div id="phone-container" class="row row-cols-1 row-cols-lg-3 g-2">
+       
     </div>
 
 
