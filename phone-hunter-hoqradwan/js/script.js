@@ -4,7 +4,7 @@ document.getElementById('error-message').style.display = "none";
 const allPhones = () => {
     const searchField = document.getElementById('search-box');
     const searchText = searchField.value;
-    searchField.value = '';
+    // searchField.value = '';
     // document.getElementById('error-message').style.display ="none";
     if (searchText == '') {
         document.getElementById('error-message').style.display = "block";
@@ -19,7 +19,7 @@ const allPhones = () => {
 
 // Show phones section
 const showPhones = phones => {
-    for (const phone of phones) {
+    phones.forEach(phone => {
         const phoneContainer = document.getElementById('phone-container');
         const div = document.createElement('div');
 
@@ -35,7 +35,7 @@ const showPhones = phones => {
     `
         phoneContainer.appendChild(div);
         // console.log(phone);
-    }
+    })
 }
 
 // getting phone id url
