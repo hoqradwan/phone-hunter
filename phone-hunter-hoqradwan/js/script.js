@@ -27,12 +27,12 @@ const showPhones = phones => {
     phones.slice(0, 20).forEach(phone => {
         const div = document.createElement('div');
         div.innerHTML = `
-    <div class="card m-auto w-75 border p-5">
+    <div class="card m-auto w-75 border card-bg rounded-lg p-4">
     <img class="card-img-top w-25" src="${phone.image}" alt="">
         <div class="card-body">
             <h2 class="card-title mt-3">${phone.phone_name}</h2>
             <h5>${phone.brand}</h5>
-            <button onclick = "phoneDetailUrl('${phone.slug}')" class="btn btn-success mt-3">Details</button>
+            <button onclick = "phoneDetailUrl('${phone.slug}')" class="btn btn-info text-white mt-3">Details</button>
         </div>
     </div> 
     `
@@ -54,7 +54,7 @@ const showDetails = details => {
     phoneDetails.textContent = '';
     const div = document.createElement('div');
     div.innerHTML = `
-    <div class="card border p-4 mb-5">
+    <div class="card border card-bg p-4 mb-5">
          <div class="card-body d-flex justify-content-center align-items-center">
          <div>
          <img class="w-75" src="${details.image}" alt="">
