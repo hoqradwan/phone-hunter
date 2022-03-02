@@ -26,7 +26,7 @@ const showPhones = phones => {
     }
     phones.slice(0, 20).forEach(phone => {
         const div = document.createElement('div');
-        div.innerHTML = ` 
+        div.innerHTML = `
     <div class="card m-auto w-75 border p-5">
     <img class="card-img-top w-25" src="${phone.image}" alt="">
         <div class="card-body">
@@ -73,5 +73,5 @@ const showDetails = details => {
          </div> 
         </div >
     </div > `
-    phoneDetails.appendChild(div);
+        phoneDetails.appendChild(div);
 }

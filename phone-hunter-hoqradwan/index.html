@@ -18,15 +18,8 @@
         <h1 class="mb-4 p-2 text-center text-info bg-dark">Phone Paradise</h1>
     </header>
     <main>
-        <!-- Phone details and search bar  -->
+        <!-- Search bar -->
         <section>
-            <h2 class="mb-3 p-2 phone-spec text-center">Phone Specifications</h2>
-            <div id="phone-details">
-            </div>
-        </section>
-        <!-- Search phones -->
-        <section>
-            <h2 class="mb-4 text-center" style="color: #94bea6;">Find Phones</h2>
             <div class="input-group mb-3 w-50 m-auto">
                 <input id="search-box" type="text" class="form-control" placeholder="Search" aria-label="Search"
                     aria-describedby="basic-addon2">
@@ -37,9 +30,17 @@
             </div>
             <h5 id="error-message" class="text-danger text-center">No phone found!</h5>
         </section>
-        
+
+        <!-- Phone details -->
+        <section>
+            <h2 class="mb-3 p-2 text-center heading-color">Phone Specifications</h2>
+            <div id="phone-details">
+            </div>
+        </section>
+
         <!-- Display phones -->
         <section>
+            <h2 class="mb-4 text-center heading-color">Phone Gallery</h2> 
             <div id="phone-container" class="row row-cols-1 row-cols-lg-3 g-2">
 
             </div>
