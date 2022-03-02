@@ -62,14 +62,14 @@ const showDetails = details => {
          <div>
          <h2 class="card-title mt-3">${details.name}</h2>
          <h5>${details.brand}</h5>
-         <h6 class="fw-bold">${details.releaseDate === ''?'unknown': `${details.releaseDate}`}</h6> 
-         <h6> <span class="fw-bold">Sensors:</span> ${details.mainFeatures.sensors}</h6> 
-         <h6> <span class="fw-bold">Bluetooth:</span> ${details.others.Bluetooth}</h6> 
-         <h6> <span class="fw-bold">GPS:</span> ${details.others.GPS}</h6> 
-         <h6> <span class="fw-bold">NFC:</span> ${details.others.NFC}</h6> 
-         <h6> <span class="fw-bold">Radio:</span> ${details.others.Radio}</h6> 
-         <h6> <span class="fw-bold">USB:</span> ${details.others.USB}</h6> 
-         <h6> <span class="fw-bold">WLAN:</span> ${details.others.WLAN}</h6> 
+         <p>${details.releaseDate === ''?'unknown': `${details.releaseDate}`}</p> 
+         <p> <span class="fw-bold">Sensors:</span> ${details.mainFeatures.sensors}</p> 
+         <p> <span class="fw-bold">Bluetooth:</span> ${details.others.Bluetooth}</p> 
+         <p> <span class="fw-bold">GPS:</span> ${details.others.GPS}</p> 
+         <p> <span class="fw-bold">NFC:</span> ${details.others.NFC}</p> 
+         <p> <span class="fw-bold">Radio:</span> ${details.others.Radio}</p> 
+         <p> <span class="fw-bold">USB:</span> ${details.others.USB}</p> 
+         <p> <span class="fw-bold">WLAN:</span> ${details.others.WLAN}</p> 
          </div> 
         </div >
     </div > `
