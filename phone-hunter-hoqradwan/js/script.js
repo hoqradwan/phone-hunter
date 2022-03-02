@@ -62,7 +62,7 @@ const showDetails = details => {
          <div>
          <h2 class="card-title mt-3">${details.name}</h2>
          <h5>${details.brand}</h5>
-         <p>${details.releaseDate === ''?'unknown': `${details.releaseDate}`}</p> 
+         <p>${details.releaseDate === ''?'No release date found': `${details.releaseDate}`}</p> 
          <p> <span class="fw-bold">Sensors:</span> ${details.mainFeatures.sensors}</p> 
          <p> <span class="fw-bold">Bluetooth:</span> ${details.others.Bluetooth}</p> 
          <p> <span class="fw-bold">GPS:</span> ${details.others.GPS}</p> 
