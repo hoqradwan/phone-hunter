@@ -54,8 +54,8 @@ const showDetails = details => {
     phoneDetails.textContent = '';
     const div = document.createElement('div');
     div.innerHTML = `
-    <div class="card border w-50 m-auto p-5 mb-5">
-         <div class="card-body d-flex align-items-center">
+    <div class="card border p-4 mb-5">
+         <div class="card-body d-flex justify-content-center align-items-center">
          <div>
          <img class="w-75" src="${details.image}" alt="">
          </div>
