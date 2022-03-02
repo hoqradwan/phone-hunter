@@ -19,7 +19,8 @@ const allPhones = () => {
 
 // Show phones section
 const showPhones = phones => {
-    phones.forEach(phone => {
+    // const allPhones = ;
+    phones.slice(0, 20).forEach(phone => {
         const phoneContainer = document.getElementById('phone-container');
         const div = document.createElement('div');
 
