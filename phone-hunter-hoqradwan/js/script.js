@@ -55,7 +55,7 @@ const showDetails = details => {
     const div = document.createElement('div');
     div.innerHTML = `
     <div class="card border card-bg p-4 mb-5">
-         <div class="card-body d-flex justify-content-center align-items-center">
+         <div class="card-body d-lg-flex justify-content-center align-items-center">
          <div>
          <img class="w-75" src="${details.image}" alt="">
          </div>
